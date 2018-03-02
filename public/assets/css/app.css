@@ -1,0 +1,11 @@
+.home-container-top-create{
+    margin-bottom: 20px;
+}
+
+#addNewPlace .modal-body{
+    overflow: hidden;
+}
+
+.map-wrapper{
+    border-left: 1px solid #e5e5e5;
+}
