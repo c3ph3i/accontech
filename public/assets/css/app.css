@@ -9,3 +9,16 @@
 .map-wrapper{
     border-left: 1px solid #e5e5e5;
 }
+
+.place-page-bottom-buttons-wrapper{
+    margin-top: 20px;
+}
+
+.place-page-top-buttons-wrapper{
+    margin-bottom: 20px;
+}
+
+.place-page-bottom-buttons-wrapper .remove-button,
+.place-page-top-buttons-wrapper .remove-button{
+    margin-right: 10px;
+}

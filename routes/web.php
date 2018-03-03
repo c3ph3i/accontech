@@ -4,5 +4,7 @@ Auth::routes();
 
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/', 'DashboardController@getHomePage')->name('home');
-    Route::post('/new', 'DashboardController@addNewLocation')->name('add_new_location');
+    Route::resource('places', 'PlacesController');
+    Route::post('/places/{id}', ['uses' => 'PlacesController@update']);
+    Route::post('/places/visited/{id}', ['uses' => 'PlacesController@updatePlaceVisitedColumnAJAX']);
 });

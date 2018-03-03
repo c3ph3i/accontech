@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class TogoList extends Model
+class Place extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -12,7 +12,14 @@ class TogoList extends Model
      * @var array
      */
     protected $fillable = [
-        'title', 'description', 'latitude', 'longitude', 'visited'
+        'title',
+        'description',
+        'latitude',
+        'longitude',
+        'visited',
+        'country',
+        'city',
+        'address'
     ];
 
     /**
