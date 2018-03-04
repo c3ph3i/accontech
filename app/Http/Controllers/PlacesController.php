@@ -120,18 +120,29 @@ class PlacesController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified resource (or all resources) from storage.
      *
      * @param  \App\Place  $place
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Place $place)
+    public function destroy(Request $request, Place $place = null)
     {
+        //If user wants to destroy all places
+        if($request->input('removing_places') == 'all')
+            Place::where('user_id', Auth::user()['id'])->delete();
+
+        //If user want to destroy one place
         //Only owner can destroy
-        if( $place->user_id == Auth::user()['id'] )
+        else if( $place->user_id == Auth::user()['id'] )
             $place->delete();
 
+
         return redirect('/')
-            ->with('success_msg','The place deleted successfully');
+            ->with('success_msg',
+                ($request->input('removing_places') == 'all')
+                    ? 'All places deleted successfully'
+                    : 'The place deleted successfully'
+            );
     }
 }

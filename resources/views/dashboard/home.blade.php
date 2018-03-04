@@ -1,5 +1,5 @@
-@extends('layouts.app')
-@section('content')
+@extends( 'layouts.app' )
+@section( 'content' )
 
     <div class="container">
         <div class="row">
@@ -12,7 +12,7 @@
                             <div class="col-md-12">
                                 <button data-toggle="modal" data-target="#addNewPlace" class="btn btn-success pull-right home-container-top-create">Add</button>
 
-                                @if (\Session::has('success_msg'))
+                                @if ( \Session::has('success_msg') )
                                         <div class="alert alert-success pull-left">
                                             <p>{{ \Session::get('success_msg') }}</p>
                                         </div>
@@ -21,7 +21,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                @if(!empty($list))
+                                @if( !empty($list) )
                                     <table class="table table-hover" id="placesListTable">
                                         <thead>
                                         <tr>
@@ -37,8 +37,8 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        @foreach($list as $place)
-                                            <tr data-place-id="{{ $place['id'] }}">
+                                        @foreach( $list as $place )
+                                            <tr>
                                                 <td>{{ $place['title'] }}</td>
                                                 <td>{{ $place['description'] }}</td>
                                                 <td>{{ $place['country'] }}</td>
@@ -46,7 +46,7 @@
                                                 <td>{{ $place['address'] }}</td>
                                                 <td>{{ $place['latitude'] }}</td>
                                                 <td>{{ $place['longitude'] }}</td>
-                                                <td><input type="checkbox" name="visited" class="place-visited-checkbox" @if( $place['visited']  == '1') checked @endif)></td>
+                                                <td><input type="checkbox" name="visited" class="place-visited-checkbox" @if( $place['visited']  == '1' ) checked @endif onchange="changePlaceStatus(this)" data-place-id="{{ $place['id'] }}"></td>
                                                 <td>
                                                     <button  class="btn btn-sm  btn-info" onclick="location.href='/places/{{ $place['id'] }}'">Open</button>
                                                     <button  class="btn btn-sm  btn-danger" onclick="if(confirm('Are you sure?\nEither OK or Cancel.'))$(this).parent().find('form').submit()">Delete</button>
@@ -68,6 +68,13 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12">
+                                @if( !empty($list) )
+                                    <button class="btn btn-danger pull-left" onclick="if(confirm('Are you sure?\nEither OK or Cancel.'))$(this).parent().find('form').submit()">Remove all</button>
+                                    <form action="{{ route('delete_all_places') }}" method="post">
+                                        {{ csrf_field() }}
+                                        <input name="removing_places" type="hidden" value="all">
+                                    </form>
+                                @endif
                                 <button data-toggle="modal" data-target="#addNewPlace" class="btn btn-success pull-right">Add</button>
                             </div>
                         </div>
@@ -89,11 +96,11 @@
                     <h4 class="modal-title">Add new place</h4>
                 </div>
                 <div class="modal-body">
-                    @if ($errors->any())
+                    @if ( $errors->any() )
                         <div class="col-md-12">
                             <div class="alert alert-danger">
                                 <ul>
-                                    @foreach ($errors->all() as $error)
+                                    @foreach ( $errors->all() as $error )
                                         <li>{{ $error }}</li>
                                     @endforeach
                                 </ul>
@@ -156,7 +163,7 @@
 
         </div>
     </div>
+
+    {{--Google map and additional scripts layout--}}
     @include('layouts.gmap_init')
-
-
 @stop

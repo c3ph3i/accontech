@@ -26,15 +26,15 @@
                                         </div>
                                     </div>
                                 @endif
-                                    <div class="col-md-12 place-page-top-buttons-wrapper">
-                                        <button type="button" class="btn btn-success pull-right" id="placeFormSubmit">Update</button>
-                                        <button type="button" class="btn btn-danger pull-right remove-button" onclick="if(confirm('Are you sure?\nEither OK or Cancel.'))$(this).parent().find('form').submit()">Delete</button>
-                                        <form action="{{action('PlacesController@destroy', $id)}}" method="post">
-                                            {{ csrf_field() }}
-                                            <input name="_method" type="hidden" value="DELETE">
-                                        </form>
-                                        <button type="button" class="btn btn-info pull-left" onclick="window.location='{{ route('home') }}'">Back to the list</button>
-                                    </div>
+                                <div class="col-md-12 place-page-top-buttons-wrapper">
+                                    <button type="button" class="btn btn-success pull-right" onclick="jQuery('#placeForm').submit()">Update</button>
+                                    <button type="button" class="btn btn-danger pull-right remove-button" onclick="if(confirm('Are you sure?\nEither OK or Cancel.'))$(this).parent().find('form').submit()">Delete</button>
+                                    <form action="{{action('PlacesController@destroy', $id)}}" method="post">
+                                        {{ csrf_field() }}
+                                        <input name="_method" type="hidden" value="DELETE">
+                                    </form>
+                                    <button type="button" class="btn btn-info pull-left" onclick="window.location='{{ route('home') }}'">Back to the list</button>
+                                </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 
                                     <form action="{{ route('places.update',$id) }}" id="placeForm" method="post">
@@ -81,7 +81,7 @@
                                 </div>
 
                                 <div class="col-md-12 place-page-bottom-buttons-wrapper">
-                                    <button type="button" class="btn btn-success pull-right" id="placeFormSubmit">Update</button>
+                                    <button type="button" class="btn btn-success pull-right" onclick="jQuery('#placeForm').submit()">Update</button>
                                     <button type="button" class="btn btn-danger pull-right remove-button" onclick="if(confirm('Are you sure?\nEither OK or Cancel.'))$(this).parent().find('form').submit()">Delete</button>
                                     <form action="{{action('PlacesController@destroy', $id)}}" method="post">
                                         {{ csrf_field() }}
@@ -96,8 +96,6 @@
             </div>
         </div>
     </div>
-
-
-
+    {{--Google map and additional scripts layout--}}
     @include('layouts.gmap_init')
 @stop

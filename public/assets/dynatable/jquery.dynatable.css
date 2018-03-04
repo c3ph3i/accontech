@@ -10,6 +10,15 @@
  */
 
 
+.dynatable-per-page-select,
+.dynatable-search input{
+	width: 100px;
+    border: 1px solid darkgray;
+    background-color: white;
+    padding: 3px;
+}
+
+
 .dynatable-search {
   float: right;
   margin-bottom: 10px;

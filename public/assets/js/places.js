@@ -38,7 +38,7 @@ function initMap() {
 
 
     /**
-     * Click on map global function
+     * Click on map event global function
      * */
     google.maps.event.addListener(map, 'click', function(event) {
         geocoder.geocode({
@@ -51,6 +51,7 @@ function initMap() {
                     var country = '';
                     var city = '';
 
+                    //Take a place information from gmap
                     for( var i = 0; i < results[0]['address_components'].length; i++ ){
                         if(results[0]['address_components'][i]['types'].indexOf("country") > -1)
                             country = results[0]['address_components'][i]['long_name'];
@@ -62,6 +63,8 @@ function initMap() {
                             street_num = results[0]['address_components'][i]['long_name'];
                         }
 
+                        //assigning a value taken from Gmap API
+                        //Address value can consist of a street + street num or only street number
                         document.getElementById('address').value = (street_num !== '') ? street + ', ' + street_num : street;
                         document.getElementById('country').value = country;
                         document.getElementById('city').value = city;
@@ -112,6 +115,8 @@ function initMap() {
 
 
 jQuery(document).ready(function(){
+
+    //Add new place / update place form submit script
     var form = jQuery("#placeForm");
     var form_submit = jQuery("#placeFormSubmit");
 
