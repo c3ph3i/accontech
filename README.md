@@ -52,7 +52,7 @@ In back-end uses:
 
 It was written as little code as possible for compactness both in front-end and in back-end.
 
-#### Author
+### Author
 [![Alexey Khachatryan](https://scontent.fevn1-1.fna.fbcdn.net/v/t1.0-1/p200x200/27072256_2114773238750938_3907997419089800418_n.png?oh=6b7f20e8b19a8ecb2ac0730757ae792d&oe=5B03669E "Alexey Khachatryan")](https://khachatryan.org/ "Alexey Khachatryan")
 
 **Name:** [Alexey Khachatryan](https://github.com/alkhachatryan/ "Alexey Khachatryan")
@@ -61,7 +61,7 @@ It was written as little code as possible for compactness both in front-end and 
 
 
 
-#### Demo
+### Demo
 You can check a demo of this application
 **URL:** [https://places.khachatryan.org](https://places.khachatryan.org "https://places.khachatryan.org")
 
@@ -70,6 +70,6 @@ You can check a demo of this application
 **Testing user password:** testtest11
 
 
-#### License
+### License
 [MIT](https://github.com/alkhachatryan/accontech/blob/master/LICENSE "MIT")
 
