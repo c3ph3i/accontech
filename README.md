@@ -56,13 +56,17 @@ It was written as little code as possible for compactness both in front-end and 
 [![Alexey Khachatryan](https://scontent.fevn1-1.fna.fbcdn.net/v/t1.0-1/p200x200/27072256_2114773238750938_3907997419089800418_n.png?oh=6b7f20e8b19a8ecb2ac0730757ae792d&oe=5B03669E "Alexey Khachatryan")](https://khachatryan.org/ "Alexey Khachatryan")
 
 **Name:** [Alexey Khachatryan](https://github.com/alkhachatryan/ "Alexey Khachatryan")
+
 **Website:** [https://khachatryan.org/](https://khachatryan.org/ "https://khachatryan.org/")
+
 
 
 #### Demo
 You can check a demo of this application
 **URL:** [https://places.khachatryan.org](https://places.khachatryan.org "https://places.khachatryan.org")
+
 **Testing user login:** test@example.com
+
 **Testing user password:** testtest11
 
 
