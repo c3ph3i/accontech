@@ -1,4 +1,4 @@
-#My ToGo List
+# My ToGo List
 [![](https://img.shields.io/badge/version-1.0.0-green.svg)](https://github.com/alkhachatryan/accontech/releases/tag/1.0.0) [![](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/alkhachatryan/accontech/blob/master/LICENSE)
 
 ------------
@@ -12,7 +12,7 @@ Create and manage the places list. This application has the following features:
 -Filtering of places list;
 - The resources (places) are protected and only owner can edit / remove the place;
 
-##Server Requirement
+## Server Requirement
 - PHP >= 7.1.3
 - OpenSSL PHP Extension
 - PDO PHP Extension
@@ -22,7 +22,7 @@ Create and manage the places list. This application has the following features:
 - Ctype PHP Extension
 - JSON PHP Extension
 
-##Installation
+## Installation
 It is expected that the Composer program is installed.
 
 For first download and install the repo:
@@ -40,7 +40,7 @@ php artisan serve
 ```
 
 
-##About application
+## About application
 This application uses ready frameworks and libraries both in front-end and in back-end. 
 
 In front-end this application uses:
@@ -52,20 +52,20 @@ In back-end uses:
 
 It was written as little code as possible for compactness both in front-end and in back-end.
 
-####Author
+#### Author
 [![Alexey Khachatryan](https://scontent.fevn1-1.fna.fbcdn.net/v/t1.0-1/p200x200/27072256_2114773238750938_3907997419089800418_n.png?oh=6b7f20e8b19a8ecb2ac0730757ae792d&oe=5B03669E "Alexey Khachatryan")](https://khachatryan.org/ "Alexey Khachatryan")
 
-**Name: **[Alexey Khachatryan](https://github.com/alkhachatryan/ "Alexey Khachatryan")
-**Website: **[https://khachatryan.org/](https://khachatryan.org/ "https://khachatryan.org/")
+**Name:** [Alexey Khachatryan](https://github.com/alkhachatryan/ "Alexey Khachatryan")
+**Website:** [https://khachatryan.org/](https://khachatryan.org/ "https://khachatryan.org/")
 
 
-####Demo
+#### Demo
 You can check a demo of this application
-**URL: ** [https://places.khachatryan.org](https://places.khachatryan.org "https://places.khachatryan.org")
-**Testing user login: ** test@example.com
-**Testing user password: **testtest11
+**URL:** [https://places.khachatryan.org](https://places.khachatryan.org "https://places.khachatryan.org")
+**Testing user login:** test@example.com
+**Testing user password:** testtest11
 
 
-####License
+#### License
 [MIT](https://github.com/alkhachatryan/accontech/blob/master/LICENSE "MIT")
 
