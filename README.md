@@ -63,6 +63,7 @@ It was written as little code as possible for compactness both in front-end and 
 
 ### Demo
 You can check a demo of this application
+
 **URL:** [https://places.khachatryan.org](https://places.khachatryan.org "https://places.khachatryan.org")
 
 **Testing user login:** test@example.com
